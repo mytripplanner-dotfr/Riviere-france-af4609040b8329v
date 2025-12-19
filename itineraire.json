@@ -1,0 +1,233 @@
+{
+  "pays": "France",
+  "drapeau": "🇫🇷",
+  "symbole": "⚜️",
+  "titre": "Éclat Lyonnais: Un Réveillon au Fil des Rivières",
+  "budget_total": "2050€",
+  "duree": "6 jours",
+  "date_debut": "2025-12-29",
+  "date_fin": "2026-01-04",
+  "temps_vol": "16h depuis Saint Agatha, Etats Unis avec escale",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée et Premiers Pas dans le Vieux Lyon",
+      "legende": "Après un long voyage, l'arrivée à Lyon marque le début d'une aventure hivernale. Le Vieux Lyon, avec ses ruelles pavées et son architecture Renaissance, offre un cadre idéal pour une première immersion douce. Laissez-vous charmer par l'atmosphère unique de ce quartier historique, classé au patrimoine mondial de l'UNESCO, et préparez-vous à découvrir les trésors cachés de la ville des lumières.",
+      "lieu": "Lyon",
+      "activites": [
+        "🛬 <strong>Arrivée à Lyon et installation</strong>: Atterrissez à l'aéroport Lyon-Saint Exupéry (LYS), puis rejoignez votre hôtel 3 étoiles au cœur de la ville pour déposer vos bagages et vous rafraîchir.",
+        "🚶‍♂️ <strong>Balade découverte dans le Vieux Lyon</strong>: Flânez dans les rues Saint-Jean et Saint-Georges, admirez les façades colorées et imprégnez-vous de l'ambiance médiévale et Renaissance de ce quartier emblématique."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil Transport",
+          "texte": "Depuis l'aéroport LYS, le Rhônexpress vous mènera directement à la gare de Lyon Part-Dieu en moins de 30 minutes, un moyen rapide et efficace de rejoindre le centre-ville."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Premières Saveurs",
+          "texte": "Pour votre premier repas, optez pour un \"bouchon\" lyonnais traditionnel dans le Vieux Lyon afin de goûter aux spécialités locales dans une ambiance conviviale."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "⛪",
+      "titre": "Hauteurs de Fourvière et Secrets des Traboules",
+      "legende": "Cette journée vous emmène sur les hauteurs de Lyon, offrant des panoramas époustouflants sur la ville et ses deux fleuves. Explorez la majestueuse Basilique de Fourvière, puis plongez dans l'histoire romaine avant de redescendre pour percer les mystères des célèbres traboules du Vieux Lyon. Une immersion profonde dans le passé et l'ingéniosité architecturale lyonnaise vous attend.",
+      "lieu": "Lyon",
+      "activites": [
+        "🚠 <strong>Montée à la Basilique Notre-Dame de Fourvière</strong>: Prenez le funiculaire pour atteindre la colline de Fourvière et visitez cette basilique emblématique, offrant une vue imprenable sur tout Lyon et les Alpes par temps clair.",
+        "🏛️ <strong>Exploration du Théâtre Antique de Fourvière</strong>: À quelques pas de la basilique, découvrez les vestiges du théâtre et de l'odéon romains, témoins de l'ancienne Lugdunum, et imaginez la vie il y a deux mille ans.",
+        "🗝️ <strong>Découverte des traboules du Vieux Lyon</strong>: Percez les passages secrets qui traversent les immeubles, reliant les rues entre elles, et admirez les cours intérieures cachées, véritables joyaux architecturaux."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Astuce Funiculaire",
+          "texte": "Le funiculaire est inclus dans le titre de transport TCL. Il y a deux lignes, l'une menant à Fourvière et l'autre à Saint-Just."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Point de Vue",
+          "texte": "Ne manquez pas la terrasse panoramique de la Basilique de Fourvière pour des photos mémorables de la ville."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🎉",
+      "titre": "Presqu'île Festive et Réveillon du Nouvel An",
+      "legende": "La Presqu'île, cœur battant de Lyon, vous invite à une journée entre culture et effervescence urbaine. Flânez sur la Place Bellecour, explorez les boutiques et plongez dans l'art au Musée des Beaux-Arts. À l'approche du soir, la ville se pare de ses plus belles lumières pour célébrer le passage à la nouvelle année, offrant une ambiance magique et inoubliable.",
+      "lieu": "Lyon",
+      "activites": [
+        "🛍️ <strong>Promenade sur la Presqu'île et Place Bellecour</strong>: Explorez le quartier central de la Presqu'île, entre Rhône et Saône, admirez la grandeur de la Place Bellecour et parcourez les rues commerçantes animées.",
+        "🎨 <strong>Visite du Musée des Beaux-Arts de Lyon</strong>: Plongez dans l'une des plus riches collections d'art de France, abritée dans l'ancien Palais Saint-Pierre, avec des œuvres allant de l'Antiquité à l'art moderne.",
+        "🥂 <strong>Célébration du Réveillon du Nouvel An</strong>: Profitez de l'ambiance festive de Lyon. De nombreux restaurants proposent des menus spéciaux, et des rassemblements spontanés ont lieu sur les places pour admirer les feux d'artifice."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🎆",
+          "titre": "Réveillon à Lyon",
+          "texte": "Pour le Nouvel An, pensez à réserver votre restaurant à l'avance. Des événements sont souvent organisés sur les quais du Rhône ou de la Saône."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Shopping",
+          "texte": "La Rue de la République et le quartier des Cordeliers sont parfaits pour le shopping de dernière minute ou pour trouver des souvenirs."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🌳",
+      "titre": "Colline de la Croix-Rousse et Détente au Parc",
+      "legende": "Le premier jour de l'année vous mène sur la colline de la Croix-Rousse, ancien quartier des soyeux lyonnais, où l'histoire des Canuts se raconte à travers les murs peints et les ateliers. Après cette immersion culturelle, un moment de détente s'impose dans le vaste Parc de la Tête d'Or, véritable poumon vert de la ville, idéal pour une promenade hivernale revigorante.",
+      "lieu": "Lyon",
+      "activites": [
+        "🧵 <strong>Découverte du quartier de la Croix-Rousse</strong>: Explorez ce quartier unique, classé UNESCO, avec ses pentes escarpées, ses \"traboules\" spécifiques et son histoire liée à l'industrie de la soie, les Canuts.",
+        "🖼️ <strong>Contemplation du Mur des Canuts</strong>: Admirez cette fresque murale géante, la plus grande d'Europe, qui représente la vie et l'histoire du quartier de la Croix-Rousse et de ses habitants, les Canuts.",
+        "🚶‍♀️ <strong>Promenade au Parc de la Tête d'Or</strong>: Profitez d'une balade relaxante dans ce grand parc urbain, abritant un lac, un jardin botanique et un zoo gratuit, parfait pour prendre l'air frais du Nouvel An."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Histoire des Canuts",
+          "texte": "Les Canuts étaient les ouvriers de la soie à Lyon. Leurs révoltes au XIXe siècle ont marqué l'histoire sociale française."
+        },
+        {
+          "symbole": "🦁",
+          "titre": "Zoo Gratuit",
+          "texte": "Le Parc de la Tête d'Or abrite un petit zoo gratuit, une belle surprise pour les visiteurs de tous âges."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🔬",
+      "titre": "Modernité à la Confluence et Saveurs aux Halles",
+      "legende": "Cette journée contraste avec les quartiers historiques en vous plongeant dans la modernité du quartier de la Confluence, où architecture audacieuse et innovation se rencontrent. Le Musée des Confluences vous invite à un voyage fascinant entre sciences et sociétés. Ensuite, régalez vos papilles aux célèbres Halles Paul Bocuse, un temple de la gastronomie lyonnaise.",
+      "lieu": "Lyon",
+      "activites": [
+        "🧪 <strong>Visite du Musée des Confluences</strong>: Explorez ce musée à l'architecture futuriste, situé à la pointe de la Presqu'île, qui propose un voyage entre sciences de la Terre, de l'Homme et des sociétés.",
+        "🏗️ <strong>Découverte du quartier de la Confluence</strong>: Admirez l'architecture contemporaine de ce quartier en pleine mutation, symbole du renouveau urbain de Lyon, avec ses bâtiments innovants et ses espaces verts.",
+        "🍽️ <strong>Dégustation aux Halles Paul Bocuse</strong>: Imprégnez-vous de l'ambiance gourmande de ce marché couvert, où vous pourrez déguster des produits locaux d'exception, des fromages aux charcuteries, en passant par les pâtisseries."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🚌",
+          "titre": "Accès Confluence",
+          "texte": "Le quartier de la Confluence est facilement accessible en tramway (T1) depuis la Presqu'île ou la gare Part-Dieu."
+        },
+        {
+          "symbole": "🧀",
+          "titre": "Plaisirs Gourmands",
+          "texte": "Aux Halles Paul Bocuse, n'hésitez pas à goûter la quenelle de brochet ou la rosette de Lyon, des spécialités incontournables."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🎬",
+      "titre": "Hommage au Cinéma et Derniers Instants Lyonnais",
+      "legende": "Pour cette dernière journée complète, plongez dans l'histoire du cinéma, né à Lyon grâce aux frères Lumière. Visitez leur institut et leur musée pour comprendre les débuts de cet art. Profitez ensuite des dernières heures pour flâner, faire quelques emplettes ou savourer un ultime repas lyonnais, avant de préparer votre départ, des souvenirs plein la tête.",
+      "lieu": "Lyon",
+      "activites": [
+        "🎥 <strong>Visite de l'Institut Lumière</strong>: Découvrez la maison des frères Lumière, inventeurs du Cinématographe, et explorez le musée qui retrace l'histoire fascinante de la naissance du cinéma.",
+        "🛍️ <strong>Shopping et souvenirs</strong>: Profitez des dernières heures pour acheter des souvenirs typiques de Lyon, comme des produits de soie, des spécialités gastronomiques ou des livres sur la ville.",
+        "👋 <strong>Dernier repas et préparation au départ</strong>: Savourez un dernier déjeuner dans un restaurant lyonnais et préparez vos bagages pour le départ le lendemain, en emportant avec vous l'essence de Lyon."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🎞️",
+          "titre": "Berceau du Cinéma",
+          "texte": "C'est à Lyon, en 1895, que les frères Lumière ont réalisé le premier film de l'histoire, \"La Sortie de l'usine Lumière à Lyon\"."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Idées Cadeaux",
+          "texte": "Pensez aux coussins de Lyon (chocolats), aux soieries ou à une bouteille de Beaujolais pour vos proches."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1000€/pers (Vol A/R classe éco Saint Agatha, USA - Lyon, France avec escale)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "60€/pers (Pass transports en commun pour 6 jours à Lyon)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "330€/pers (Budget moyen pour 6 jours, incluant un repas de réveillon)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "500€/pers (6 nuits en hôtel 3 étoiles, base chambre double)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "150€/pers (Entrées musées, funiculaire, visites guidées)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de mai à septembre pour un climat doux, ou décembre pour l'ambiance festive de Noël et du Nouvel An.",
+      "symbole": "🍁"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Lyon compte environ 520 000 habitants (2,3 millions pour l'agglomération), ce qui en fait la troisième ville de France en termes de population.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "La France est un pays membre de l'Union Européenne, utilisant l'Euro (€) comme monnaie. Les cartes de crédit sont largement acceptées.",
+      "symbole": "🇪🇺"
+    },
+    {
+      "titre": "Lyon est mondialement reconnue comme la capitale de la gastronomie. Ne manquez pas de découvrir ses \"bouchons\" lyonnais, des restaurants typiques et conviviaux.",
+      "symbole": "🍽️"
+    },
+    {
+      "titre": "La ville est traversée par deux fleuves, le Rhône et la Saône, qui se rejoignent au quartier de la Confluence, offrant des paysages urbains uniques.",
+      "symbole": "🌊"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Site officiel du tourisme à Lyon",
+      "titre": "OnlyLyon Tourisme",
+      "url": "https://www.lyon-france.com/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Informations sur les transports en commun lyonnais",
+      "titre": "TCL - Transports en Commun Lyonnais",
+      "url": "https://www.tcl.fr/",
+      "symbole": "🚆"
+    },
+    {
+      "legende": "Prévisions météo détaillées pour la France",
+      "titre": "Météo France",
+      "url": "https://www.meteofrance.com/",
+      "symbole": "🌤️"
+    }
+  ]
+}
