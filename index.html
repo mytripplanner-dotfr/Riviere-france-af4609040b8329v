@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éclat Lyonnais: Un Réveillon au Fil des Rivières </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée et Premiers Pas dans le Vieux Lyon</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Hauteurs de Fourvière et Secrets des Traboules</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Presqu'île Festive et Réveillon du Nouvel An</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Colline de la Croix-Rousse et Détente au Parc</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Modernité à la Confluence et Saveurs aux Halles</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Hommage au Cinéma et Derniers Instants Lyonnais</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Riviere-france-af4609040b8329v/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">RIVIERE- FRANCE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Éclat Lyonnais: Un Réveillon au Fil des Rivières</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 29 Décembre 2025 au 4 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 2050€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 16h depuis Saint Agatha, Etats Unis avec escale</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée et Premiers Pas dans le Vieux Lyon</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, l'arrivée à Lyon marque le début d'une aventure hivernale. Le Vieux Lyon, avec ses ruelles pavées et son architecture Renaissance, offre un cadre idéal pour une première immersion douce. Laissez-vous charmer par l'atmosphère unique de ce quartier historique, classé au patrimoine mondial de l'UNESCO, et préparez-vous à découvrir les trésors cachés de la ville des lumières.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à Lyon et installation</strong>: Atterrissez à l'aéroport Lyon-Saint Exupéry (LYS), puis rejoignez votre hôtel 3 étoiles au cœur de la ville pour déposer vos bagages et vous rafraîchir.</li><li>🚶‍♂️ <strong>Balade découverte dans le Vieux Lyon</strong>: Flânez dans les rues Saint-Jean et Saint-Georges, admirez les façades colorées et imprégnez-vous de l'ambiance médiévale et Renaissance de ce quartier emblématique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Riviere-france-af4609040b8329v/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil Transport</p>
+                                <p class="text-gray-700">Depuis l'aéroport LYS, le Rhônexpress vous mènera directement à la gare de Lyon Part-Dieu en moins de 30 minutes, un moyen rapide et efficace de rejoindre le centre-ville.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Premières Saveurs</p>
+                                <p class="text-gray-700">Pour votre premier repas, optez pour un "bouchon" lyonnais traditionnel dans le Vieux Lyon afin de goûter aux spécialités locales dans une ambiance conviviale.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Hauteurs de Fourvière et Secrets des Traboules</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée vous emmène sur les hauteurs de Lyon, offrant des panoramas époustouflants sur la ville et ses deux fleuves. Explorez la majestueuse Basilique de Fourvière, puis plongez dans l'histoire romaine avant de redescendre pour percer les mystères des célèbres traboules du Vieux Lyon. Une immersion profonde dans le passé et l'ingéniosité architecturale lyonnaise vous attend.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚠 <strong>Montée à la Basilique Notre-Dame de Fourvière</strong>: Prenez le funiculaire pour atteindre la colline de Fourvière et visitez cette basilique emblématique, offrant une vue imprenable sur tout Lyon et les Alpes par temps clair.</li><li>🏛️ <strong>Exploration du Théâtre Antique de Fourvière</strong>: À quelques pas de la basilique, découvrez les vestiges du théâtre et de l'odéon romains, témoins de l'ancienne Lugdunum, et imaginez la vie il y a deux mille ans.</li><li>🗝️ <strong>Découverte des traboules du Vieux Lyon</strong>: Percez les passages secrets qui traversent les immeubles, reliant les rues entre elles, et admirez les cours intérieures cachées, véritables joyaux architecturaux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Riviere-france-af4609040b8329v/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Astuce Funiculaire</p>
+                                <p class="text-gray-700">Le funiculaire est inclus dans le titre de transport TCL. Il y a deux lignes, l'une menant à Fourvière et l'autre à Saint-Just.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Point de Vue</p>
+                                <p class="text-gray-700">Ne manquez pas la terrasse panoramique de la Basilique de Fourvière pour des photos mémorables de la ville.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Presqu'île Festive et Réveillon du Nouvel An</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La Presqu'île, cœur battant de Lyon, vous invite à une journée entre culture et effervescence urbaine. Flânez sur la Place Bellecour, explorez les boutiques et plongez dans l'art au Musée des Beaux-Arts. À l'approche du soir, la ville se pare de ses plus belles lumières pour célébrer le passage à la nouvelle année, offrant une ambiance magique et inoubliable.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Promenade sur la Presqu'île et Place Bellecour</strong>: Explorez le quartier central de la Presqu'île, entre Rhône et Saône, admirez la grandeur de la Place Bellecour et parcourez les rues commerçantes animées.</li><li>🎨 <strong>Visite du Musée des Beaux-Arts de Lyon</strong>: Plongez dans l'une des plus riches collections d'art de France, abritée dans l'ancien Palais Saint-Pierre, avec des œuvres allant de l'Antiquité à l'art moderne.</li><li>🥂 <strong>Célébration du Réveillon du Nouvel An</strong>: Profitez de l'ambiance festive de Lyon. De nombreux restaurants proposent des menus spéciaux, et des rassemblements spontanés ont lieu sur les places pour admirer les feux d'artifice.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Riviere-france-af4609040b8329v/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎆 Réveillon à Lyon</p>
+                                <p class="text-gray-700">Pour le Nouvel An, pensez à réserver votre restaurant à l'avance. Des événements sont souvent organisés sur les quais du Rhône ou de la Saône.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Shopping</p>
+                                <p class="text-gray-700">La Rue de la République et le quartier des Cordeliers sont parfaits pour le shopping de dernière minute ou pour trouver des souvenirs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Colline de la Croix-Rousse et Détente au Parc</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le premier jour de l'année vous mène sur la colline de la Croix-Rousse, ancien quartier des soyeux lyonnais, où l'histoire des Canuts se raconte à travers les murs peints et les ateliers. Après cette immersion culturelle, un moment de détente s'impose dans le vaste Parc de la Tête d'Or, véritable poumon vert de la ville, idéal pour une promenade hivernale revigorante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🧵 <strong>Découverte du quartier de la Croix-Rousse</strong>: Explorez ce quartier unique, classé UNESCO, avec ses pentes escarpées, ses "traboules" spécifiques et son histoire liée à l'industrie de la soie, les Canuts.</li><li>🖼️ <strong>Contemplation du Mur des Canuts</strong>: Admirez cette fresque murale géante, la plus grande d'Europe, qui représente la vie et l'histoire du quartier de la Croix-Rousse et de ses habitants, les Canuts.</li><li>🚶‍♀️ <strong>Promenade au Parc de la Tête d'Or</strong>: Profitez d'une balade relaxante dans ce grand parc urbain, abritant un lac, un jardin botanique et un zoo gratuit, parfait pour prendre l'air frais du Nouvel An.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Riviere-france-af4609040b8329v/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Histoire des Canuts</p>
+                                <p class="text-gray-700">Les Canuts étaient les ouvriers de la soie à Lyon. Leurs révoltes au XIXe siècle ont marqué l'histoire sociale française.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦁 Zoo Gratuit</p>
+                                <p class="text-gray-700">Le Parc de la Tête d'Or abrite un petit zoo gratuit, une belle surprise pour les visiteurs de tous âges.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Modernité à la Confluence et Saveurs aux Halles</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée contraste avec les quartiers historiques en vous plongeant dans la modernité du quartier de la Confluence, où architecture audacieuse et innovation se rencontrent. Le Musée des Confluences vous invite à un voyage fascinant entre sciences et sociétés. Ensuite, régalez vos papilles aux célèbres Halles Paul Bocuse, un temple de la gastronomie lyonnaise.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🧪 <strong>Visite du Musée des Confluences</strong>: Explorez ce musée à l'architecture futuriste, situé à la pointe de la Presqu'île, qui propose un voyage entre sciences de la Terre, de l'Homme et des sociétés.</li><li>🏗️ <strong>Découverte du quartier de la Confluence</strong>: Admirez l'architecture contemporaine de ce quartier en pleine mutation, symbole du renouveau urbain de Lyon, avec ses bâtiments innovants et ses espaces verts.</li><li>🍽️ <strong>Dégustation aux Halles Paul Bocuse</strong>: Imprégnez-vous de l'ambiance gourmande de ce marché couvert, où vous pourrez déguster des produits locaux d'exception, des fromages aux charcuteries, en passant par les pâtisseries.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Riviere-france-af4609040b8329v/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚌 Accès Confluence</p>
+                                <p class="text-gray-700">Le quartier de la Confluence est facilement accessible en tramway (T1) depuis la Presqu'île ou la gare Part-Dieu.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧀 Plaisirs Gourmands</p>
+                                <p class="text-gray-700">Aux Halles Paul Bocuse, n'hésitez pas à goûter la quenelle de brochet ou la rosette de Lyon, des spécialités incontournables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Hommage au Cinéma et Derniers Instants Lyonnais</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour cette dernière journée complète, plongez dans l'histoire du cinéma, né à Lyon grâce aux frères Lumière. Visitez leur institut et leur musée pour comprendre les débuts de cet art. Profitez ensuite des dernières heures pour flâner, faire quelques emplettes ou savourer un ultime repas lyonnais, avant de préparer votre départ, des souvenirs plein la tête.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎥 <strong>Visite de l'Institut Lumière</strong>: Découvrez la maison des frères Lumière, inventeurs du Cinématographe, et explorez le musée qui retrace l'histoire fascinante de la naissance du cinéma.</li><li>🛍️ <strong>Shopping et souvenirs</strong>: Profitez des dernières heures pour acheter des souvenirs typiques de Lyon, comme des produits de soie, des spécialités gastronomiques ou des livres sur la ville.</li><li>👋 <strong>Dernier repas et préparation au départ</strong>: Savourez un dernier déjeuner dans un restaurant lyonnais et préparez vos bagages pour le départ le lendemain, en emportant avec vous l'essence de Lyon.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Riviere-france-af4609040b8329v/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎞️ Berceau du Cinéma</p>
+                                <p class="text-gray-700">C'est à Lyon, en 1895, que les frères Lumière ont réalisé le premier film de l'histoire, "La Sortie de l'usine Lumière à Lyon".</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Idées Cadeaux</p>
+                                <p class="text-gray-700">Pensez aux coussins de Lyon (chocolats), aux soieries ou à une bouteille de Beaujolais pour vos proches.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>1000€/pers (Vol A/R classe éco Saint Agatha, USA - Lyon, France avec escale)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>60€/pers (Pass transports en commun pour 6 jours à Lyon)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>330€/pers (Budget moyen pour 6 jours, incluant un repas de réveillon)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>500€/pers (6 nuits en hôtel 3 étoiles, base chambre double)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>150€/pers (Entrées musées, funiculaire, visites guidées)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de mai à septembre pour un climat doux, ou décembre pour l'ambiance festive de Noël et du Nouvel An.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 Lyon compte environ 520 000 habitants (2,3 millions pour l'agglomération), ce qui en fait la troisième ville de France en termes de population.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇪🇺 La France est un pays membre de l'Union Européenne, utilisant l'Euro (€) comme monnaie. Les cartes de crédit sont largement acceptées.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🍽️ Lyon est mondialement reconnue comme la capitale de la gastronomie. Ne manquez pas de découvrir ses "bouchons" lyonnais, des restaurants typiques et conviviaux.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🌊 La ville est traversée par deux fleuves, le Rhône et la Saône, qui se rejoignent au quartier de la Confluence, offrant des paysages urbains uniques.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Riviere-france-af4609040b8329v/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.lyon-france.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 OnlyLyon Tourisme</strong></a></li>
+                    
+                        <li><a href="https://www.tcl.fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚆 TCL - Transports en Commun Lyonnais</strong></a></li>
+                    
+                        <li><a href="https://www.meteofrance.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo France</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
